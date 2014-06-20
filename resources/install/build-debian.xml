@@ -215,7 +215,7 @@ org.jitsi.bccontrib.prng,
 org.jitsi.bccontrib.util"/>
             </manifest>
         </jar>
-        <copy todir="lib/bccontrib.jar"
+        <copy tofile="lib/bccontrib.jar"
               file="lib/src/bccontrib/target/bccontrib-1.0-SNAPSHOT.jar"/>
 
         <!-- compile and pack fmj -->
