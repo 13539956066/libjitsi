@@ -131,6 +131,8 @@
         <symlink resource="../../weupnp/weupnp.jar"
                  overwrite="true"
                  link="lib/src/ice4j/lib/weupnp-0.1.2-SNAPSHOT.jar"/>
+        <copy tofile="lib/weupnp.jar"
+              file="lib/src/ice4j/lib/weupnp-0.1.2-SNAPSHOT.jar"/>
 
         <!-- sdes -->
         <mkdir dir="lib/src/sdes4j/lib"/>
@@ -141,7 +143,7 @@
              inheritAll="false"
              target="jar">
         </ant>
-        <copy todir="lib"
+        <copy tofile="lib/sdes4j.jar"
               file="lib/src/sdes4j/build/SDES4J-1.0.1.jar"/>
 
         <symlink resource="/usr/share/java/org.apache.felix.framework.jar"
@@ -160,6 +162,10 @@
              target="dist">
         </ant>
         <copy tofile="lib/jain-sdp.jar"
+              file="lib/src/jsip/jain-sip-sdp-1.2.159.jar"/>
+        <copy tofile="lib/jain-sip-api.jar"
+              file="lib/src/jsip/jain-sip-api-1.2.jar"/>
+        <copy tofile="lib/jain-sip-ri.jar"
               file="lib/src/jsip/jain-sip-sdp-1.2.159.jar"/>
         <symlink resource="../../jsip/jain-sip-sdp-1.2.159.jar"
                  overwrite="true"
@@ -209,7 +215,7 @@ org.jitsi.bccontrib.prng,
 org.jitsi.bccontrib.util"/>
             </manifest>
         </jar>
-        <copy todir="lib"
+        <copy todir="lib/bccontrib.jar"
               file="lib/src/bccontrib/target/bccontrib-1.0-SNAPSHOT.jar"/>
 
         <!-- compile and pack fmj -->
