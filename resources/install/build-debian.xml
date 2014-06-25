@@ -48,10 +48,6 @@
             </fileset>
         </copy>
 
-        <!-- weupnp -->
-        <unzip src="../libsrc/weupnp.zip"
-               dest="${tmp}/libjitsi/lib/src"/>
-
         <!-- jsip -->
         <unzip src="../libsrc/jsip.zip"
                dest="${tmp}/libjitsi/lib/src/">
@@ -122,17 +118,10 @@
     <target name="deb-src-rebuild">
             <!--depends="make"-->
 
-        <!-- weupnp -->
-        <ant dir="lib/src/weupnp"
-             inheritAll="false"
-             target="jar"/>
-
         <mkdir dir="lib/src/ice4j/lib"/>
-        <symlink resource="../../weupnp/weupnp.jar"
+        <symlink resource="/usr/share/java/weupnp.jar"
                  overwrite="true"
                  link="lib/src/ice4j/lib/weupnp-0.1.2-SNAPSHOT.jar"/>
-        <copy tofile="lib/weupnp.jar"
-              file="lib/src/ice4j/lib/weupnp-0.1.2-SNAPSHOT.jar"/>
 
         <!-- sdes -->
         <mkdir dir="lib/src/sdes4j/lib"/>
