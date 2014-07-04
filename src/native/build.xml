@@ -687,6 +687,7 @@
 
       <linkerarg value="-m32" if="cross_32" unless="is.running.macos" />
       <linkerarg value="-m64" if="cross_64" unless="is.running.macos" />
+      <linkerarg value="-Wl,-z,relro" if="is.running.debian"/>
 
       <!-- Mac OS X specific flags -->
       <compilerarg value="-mmacosx-version-min=10.5" if="is.running.macos"/>
